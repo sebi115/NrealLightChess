@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TNTC_Disintegration_base
+  m_Shader: {fileID: 4800000, guid: 76fef6f7816ab00419e42c7d40496f5d, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTexture:
+        m_Texture: {fileID: 2800000, guid: 34c086d98af62ca4f98c835081554a71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowMap:
+        m_Texture: {fileID: 2800000, guid: 007d6f49746fc2c419f03f4630ce2fcc, type: 3}
+        m_Scale: {x: 0.8, y: 82.1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8799d6b00564d4ae4ad52cc972153b72, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Shape:
+        m_Texture: {fileID: 2800000, guid: ebbb7e2724e176e429b7620abf1659aa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpStr: 0.01
+    - _DissolveBorder: 0.02
+    - _Exapnd: 0.001
+    - _Glow: 3.7
+    - _R: 0.0005
+    - _Weight: 0
+    m_Colors:
+    - _AmbientColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+    - _Color: {r: 0.117372714, g: 0.3962264, b: 0.15631565, a: 1}
+    - _Direction: {r: 0, g: 0, b: 0, a: 0}
+    - _DisintegrationColor: {r: 0.056194365, g: 0.38679248, b: 0.08315634, a: 1}
+    - _DissolveColor: {r: 0.08939122, g: 0.764151, b: 0.112090394, a: 1}
+  m_BuildTextureStacks: []
