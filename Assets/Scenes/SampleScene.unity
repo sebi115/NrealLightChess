@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df81f3ca28c9f0a44a7e1865048fae5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chessBoardPrefab: {fileID: 4653854402146277131, guid: 7a6d37da845b71e468a21a3bf0910a6e, type: 3}
+  chessBoardPrefab: {fileID: 4042636074551198150, guid: 7a6d37da845b71e468a21a3bf0910a6e, type: 3}
   Reset: {fileID: 1193551314}
 --- !u!114 &782628378
 MonoBehaviour:

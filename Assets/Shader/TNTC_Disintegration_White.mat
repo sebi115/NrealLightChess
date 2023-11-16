@@ -26,32 +26,32 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DissolveTexture:
         m_Texture: {fileID: 2800000, guid: 34c086d98af62ca4f98c835081554a71, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.68, y: 3.14}
         m_Offset: {x: 0, y: 0}
     - _FlowMap:
         m_Texture: {fileID: 2800000, guid: 007d6f49746fc2c419f03f4630ce2fcc, type: 3}
-        m_Scale: {x: 0.8, y: 82.1}
+        m_Scale: {x: 0.8, y: -3.8}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6194367dbd52f675d9e51fad0c0523d0, type: 3}
+        m_Texture: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Shape:
-        m_Texture: {fileID: 2800000, guid: ebbb7e2724e176e429b7620abf1659aa, type: 3}
+        m_Texture: {fileID: 2800000, guid: c1b35bf40fa8c1a47a22cfd0c3e8e6e0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpStr: 0.01
-    - _DissolveBorder: 0.02
-    - _Exapnd: 0.001
-    - _Glow: 0.6
-    - _R: 0.0005
+    - _DissolveBorder: 0.21
+    - _Exapnd: -1.78
+    - _Glow: 1.93
+    - _R: 0.005
     - _Weight: 0
     m_Colors:
     - _AmbientColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
     - _Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     - _Direction: {r: 0, g: 0, b: 0, a: 0}
-    - _DisintegrationColor: {r: 0.03773582, g: 0.034318235, b: 0.034318235, a: 1}
+    - _DisintegrationColor: {r: 0.4433962, g: 0.43712175, b: 0.43712175, a: 1}
     - _DissolveColor: {r: 0.41011035, g: 0.42044535, b: 0.4245283, a: 1}
   m_BuildTextureStacks: []
