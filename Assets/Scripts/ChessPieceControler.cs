@@ -49,7 +49,6 @@ namespace NRKernal.NRExamples
 
                     // place the chess piece at the pointer hit
                     transform.localPosition = calculateBoardSquare(hitResult.point);
-                    Debug.Log("transform.localPosition: " + transform.localPosition);
                     this.transform.rotation = rotation;
                     is_selected = false;
                     this.gameObject.layer = layer;
