@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // A video Capture Example
-public class Record : MonoBehaviour
+public class RecordTest : MonoBehaviour
 {
     /// <summary> The previewer. </summary>
     public NRPreviewer Previewer;

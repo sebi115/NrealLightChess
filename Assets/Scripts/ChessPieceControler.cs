@@ -3,6 +3,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
+using System;
 
 namespace NRKernal.NRExamples
 {
@@ -17,7 +18,7 @@ namespace NRKernal.NRExamples
         private float placedCounter = 0.0f;
         private int layer;
         private bool justPlaced = false;
-        private float scale = 0.01f;
+     // private float scale = 0.001f;
         private float pieceLaserPosition = 1.0f;
 
         void Awake()
@@ -37,16 +38,18 @@ namespace NRKernal.NRExamples
                 var handControllerAnchor = NRInput.DomainHand == ControllerHandEnum.Left ? ControllerAnchorEnum.LeftLaserAnchor : ControllerAnchorEnum.RightLaserAnchor;
                 Transform laserAnchor = NRInput.AnchorsHelper.GetAnchor(NRInput.RaycastMode == RaycastModeEnum.Gaze ? ControllerAnchorEnum.GazePoseTrackerAnchor : handControllerAnchor);
 
-                pieceLaserPosition += Input.mouseScrollDelta.y * scale;
+                // pieceLaserPosition += Input.mouseScrollDelta.y * scale;
 
-                transform.position = laserAnchor.transform.position + laserAnchor.transform.forward * pieceLaserPosition + new Vector3 (0,0.075f, 0);
+                transform.position = laserAnchor.transform.position + laserAnchor.transform.forward * 0.5f + new Vector3 (0,0.075f, 0);
                 transform.rotation = rotation;
 
                 RaycastHit hitResult;
                 if (Physics.Raycast(new Ray(laserAnchor.transform.position, laserAnchor.transform.forward), out hitResult, 10, ~3 & 8 | 9) && NRInput.GetButtonDown(ControllerButton.TRIGGER))
                 {
+
                     // place the chess piece at the pointer hit
-                    this.transform.position = hitResult.point + new Vector3(0.0f, 0.075f, 0.0f);
+                    transform.localPosition = calculateBoardSquare(hitResult.point);
+                    Debug.Log("transform.localPosition: " + transform.localPosition);
                     this.transform.rotation = rotation;
                     is_selected = false;
                     this.gameObject.layer = layer;
@@ -67,7 +70,7 @@ namespace NRKernal.NRExamples
             if (isDestroyed)
             {
                 gameObject.GetComponent<Renderer>().material.SetFloat("_Weight", destroyCounter);
-                destroyCounter += 0.01f;
+                destroyCounter += 0.04f;
                 if (destroyCounter > 1)
                 {
                     Destroy(this.gameObject);
@@ -99,6 +102,18 @@ namespace NRKernal.NRExamples
                 Destroy(GetComponent<Rigidbody>(), 0.2f);
                 isDestroyed = true;
             }
+        }
+
+        public Vector3 calculateBoardSquare(Vector3 hitPoint)
+        {
+            Vector3 localCoordinates = this.transform.parent.gameObject.transform.gameObject.transform.InverseTransformPoint(hitPoint);
+
+            float x_pos = (float)localCoordinates.x - 0.5f;
+            float z_pos = (float)localCoordinates.z + 0.5f;
+
+            Vector3 squareCenter = new Vector3((float)Math.Floor(x_pos) + 1f, 0.75f, (float)Math.Floor(z_pos));
+
+            return squareCenter;
         }
     }
 }
