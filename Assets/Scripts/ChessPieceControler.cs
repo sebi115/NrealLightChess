@@ -8,7 +8,7 @@ using System;
 namespace NRKernal.NRExamples
 {
     /// <summary> A chess piece controler. </summary>
-    public class ChessPieceControler : MonoBehaviour, IPointerClickHandler
+    public class ChessPieceControler : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
         private bool is_selected = false;
         private Quaternion rotation;
@@ -20,12 +20,14 @@ namespace NRKernal.NRExamples
         private bool justPlaced = false;
      // private float scale = 0.001f;
         private float pieceLaserPosition = 1.0f;
+        private Color color;
 
         void Awake()
         {
             rotation = this.rotation;
             layer = this.gameObject.layer;
             Debug.Log(layer);
+            color = gameObject.GetComponent<Renderer>().material.color;
         }
 
         /// <summary> Updates this object. </summary>
@@ -91,6 +93,25 @@ namespace NRKernal.NRExamples
                 {
                     this.gameObject.layer = 8;
                 }
+            }
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            Debug.Log("pointer enter");
+
+            if (!is_selected)
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.green;
+            }
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+
+            if (!is_selected)
+            {
+                gameObject.GetComponent<Renderer>().material.color = color;
             }
         }
 
