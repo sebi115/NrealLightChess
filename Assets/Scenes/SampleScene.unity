@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224310998581552222, guid: 1cf02312f745518428339a24394b3af6, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224310998581552222, guid: 1cf02312f745518428339a24394b3af6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df81f3ca28c9f0a44a7e1865048fae5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chessBoardPrefab: {fileID: 4042636074551198150, guid: 7a6d37da845b71e468a21a3bf0910a6e, type: 3}
+  chessBoardPrefab: {fileID: 557868375146514886, guid: 5a595bbaf5632544c840e912db51db07, type: 3}
   Reset: {fileID: 1193551314}
 --- !u!114 &782628378
 MonoBehaviour:
@@ -1005,7 +1005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1004773273}
-  - component: {fileID: 1004773272}
+  - component: {fileID: 1004773274}
   m_Layer: 0
   m_Name: RecordManager
   m_TagString: Untagged
@@ -1013,23 +1013,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1004773272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004773271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66bc448c64194aa428a8215ae35770d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Previewer: {fileID: 1810941551}
-  cullingMask:
-    serializedVersion: 2
-    m_Bits: 1023
-  playStopButton: {fileID: 1431076937}
 --- !u!4 &1004773273
 Transform:
   m_ObjectHideFlags: 0
@@ -1043,8 +1026,33 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1004773274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004773271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62b7f569e4a6444aa69c7c0985d9d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayButton: {fileID: 1431076937}
+  m_Previewer: {fileID: 1810941551}
+  m_SliderMic: {fileID: 0}
+  m_TextMic: {fileID: 0}
+  m_SliderApp: {fileID: 0}
+  m_TextApp: {fileID: 0}
+  blendMode: 0
+  resolutionLevel: 0
+  cullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  audioState: 1
+  useGreenBackGround: 0
 --- !u!1 &1193551312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,8 +1503,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1004773272}
-        m_TargetAssemblyTypeName: Record, Assembly-CSharp
+      - m_Target: {fileID: 1004773274}
+        m_TargetAssemblyTypeName: NRKernal.NRExamples.VideoCapture2LocalExample,
+          Assembly-CSharp
         m_MethodName: OnClickPlayButton
         m_Mode: 1
         m_Arguments:
